@@ -1,5 +1,5 @@
 //
-//  AlamofireWrapper.swift
+//  AFWrapper.swift
 //  AlamofireWrapper
 //
 //  Created by Hariharan R S on 07/04/25.
@@ -8,10 +8,13 @@
 import Foundation
 import Alamofire
 
-@objc
-public class AlamofireWrapper: NSObject {
+public class AFWrapper {
     
-    @objc public func getAllUsers() async throws -> [UserModel] {
+    public init() {
+        
+    }
+    
+    public func getAllUsers() async throws -> [UserModel] {
         try await withCheckedThrowingContinuation { continuation in
             AF.request("https://dummyjson.com/users", method: .get, parameters: nil, encoding: URLEncoding.default)
                 .validate()

@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52FD697D2DA3E14000101FA1 /* AlamofireWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD697C2DA3E14000101FA1 /* AlamofireWrapper.swift */; };
+		52FD697D2DA3E14000101FA1 /* AFWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD697C2DA3E14000101FA1 /* AFWrapper.swift */; };
 		52FD69802DA3E14C00101FA1 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD697F2DA3E14C00101FA1 /* UserResponse.swift */; };
 		52FD69832DA3E17B00101FA1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52FD69822DA3E17B00101FA1 /* Alamofire */; };
 		AB94F7AC2DA3BAC5004295DA /* AlamofireWrapper.docc in Sources */ = {isa = PBXBuildFile; fileRef = AB94F7AB2DA3BAC5004295DA /* AlamofireWrapper.docc */; };
-		AB94F7AD2DA3BAC5004295DA /* AlamofireWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = AB94F7AA2DA3BAC5004295DA /* AlamofireWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,10 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		52FD697C2DA3E14000101FA1 /* AlamofireWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireWrapper.swift; sourceTree = "<group>"; };
+		52FD697C2DA3E14000101FA1 /* AFWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFWrapper.swift; sourceTree = "<group>"; };
 		52FD697F2DA3E14C00101FA1 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		AB94F7A72DA3BAC5004295DA /* AlamofireWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB94F7AA2DA3BAC5004295DA /* AlamofireWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlamofireWrapper.h; sourceTree = "<group>"; };
 		AB94F7AB2DA3BAC5004295DA /* AlamofireWrapper.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AlamofireWrapper.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,8 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				52FD697E2DA3E14400101FA1 /* Model */,
-				52FD697C2DA3E14000101FA1 /* AlamofireWrapper.swift */,
-				AB94F7AA2DA3BAC5004295DA /* AlamofireWrapper.h */,
+				52FD697C2DA3E14000101FA1 /* AFWrapper.swift */,
 				AB94F7AB2DA3BAC5004295DA /* AlamofireWrapper.docc */,
 			);
 			path = AlamofireWrapper;
@@ -89,7 +86,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB94F7AD2DA3BAC5004295DA /* AlamofireWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FD697D2DA3E14000101FA1 /* AlamofireWrapper.swift in Sources */,
+				52FD697D2DA3E14000101FA1 /* AFWrapper.swift in Sources */,
 				AB94F7AC2DA3BAC5004295DA /* AlamofireWrapper.docc in Sources */,
 				52FD69802DA3E14C00101FA1 /* UserResponse.swift in Sources */,
 			);
