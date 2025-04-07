@@ -1,4 +1,0 @@
-framework module AlamofireWrapper {
-  header "AlamofireWrapper-Swift.h"
-  requires objc
-}

@@ -1,6 +1,0 @@
-framework module Pods_AlamofireWrapper {
-  umbrella header "Pods-AlamofireWrapper-umbrella.h"
-
-  export *
-  module * { export * }
-}
