@@ -14,14 +14,14 @@ import Alamofire
         super.init()
     }
     
-    @objc public func getAllUsers() async throws -> NSArray {
+    @objc public func getAllUsers() async throws -> [UserModel] {
         try await withCheckedThrowingContinuation { continuation in
             AF.request("https://dummyjson.com/users", method: .get, parameters: nil, encoding: URLEncoding.default)
                 .validate()
                 .responseDecodable(of: UserResponse.self) { response in
                     switch response.result {
                     case .success(let userResponse):
-                        continuation.resume(returning: NSArray(array: userResponse.users))
+                        continuation.resume(returning: userResponse.users)
                     case .failure(let error):
                         continuation.resume(throwing: error)
                     }
@@ -29,19 +29,7 @@ import Alamofire
         }
     }
     
-    @objc public func getAllUsersWithCompletion(
-       completion: @escaping ([UserModel]) -> Void,
-       failure: @escaping (Error) -> Void
-    ) {
-        AF.request("https://dummyjson.com/users", method: .get, parameters: nil, encoding: URLEncoding.default)
-           .validate()
-           .responseDecodable(of: UserResponse.self) { response in
-               switch response.result {
-               case .success(let userResponse):
-                   completion(userResponse.users)
-               case .failure(let error):
-                   failure(error)
-               }
-           }
+    @objc public func getBundleName() -> String {
+        return Bundle.main.bundleIdentifier ?? "No Bundle Identifier Found"
     }
 }
