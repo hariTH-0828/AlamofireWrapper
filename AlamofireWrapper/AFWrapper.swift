@@ -8,13 +8,13 @@
 import Foundation
 import Alamofire
 
-public class AFWrapper {
+@objc public class AFWrapper: NSObject {
     
-    public init() {
+    @objc public override init() {
         
     }
     
-    public func getAllUsers() async throws -> [UserModel] {
+    @objc public func getAllUsers() async throws -> [UserModel] {
         try await withCheckedThrowingContinuation { continuation in
             AF.request("https://dummyjson.com/users", method: .get, parameters: nil, encoding: URLEncoding.default)
                 .validate()

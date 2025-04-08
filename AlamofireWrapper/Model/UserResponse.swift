@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct UserResponse: Codable, Sendable {
+public struct UserResponse: Codable {
     public let users: [UserModel]
     
     enum CodingKeys: String, CodingKey {
@@ -15,12 +15,12 @@ public struct UserResponse: Codable, Sendable {
     }
 }
 
-public struct UserModel: Codable, Sendable {
-    public var id: Int = 0
-    public var firstName: String = ""
-    public var lastName: String = ""
-    public var age: Int = 0
-    public var gender: String = ""
+@objc public class UserModel: NSObject, Codable {
+    @objc public var id: Int = 0
+    @objc public var firstName: String = ""
+    @objc public var lastName: String = ""
+    @objc public var age: Int = 0
+    @objc public var gender: String = ""
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -28,5 +28,13 @@ public struct UserModel: Codable, Sendable {
         case lastName
         case age
         case gender
+    }
+    
+    @objc public override init() {
+        self.id = 0
+        self.firstName = ""
+        self.lastName = ""
+        self.age = 0
+        self.gender = ""
     }
 }
